@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get" id="prueba">
+      <label for="">nombre</label>
+
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value="perez"
+        placeholder="Escribir su nombre"
+        maxlength="15"
+        minlength="3" />
+        <br>
+        <br>
+
+      <label for="">apellido</label>
+      <input
+        type="text"
+        name="name"
+        id="apellido1"
+        placeholder="apellido1"
+        maxlength="15"
+        minlength="3"
+        readonly />
+
+      <input type="submit" value="aceptar" />
+
+      <label for="password">contraseña</label>
+      <input type="password" />
+      <br />
+      <br />
+
+      <label for="numero">edad</label>
+      <input type="number" id="numero" min="1" max="20" />
+      <br />
+      <br />
+
+      <label for="email">correo</label>
+      <input type="email" id="correo" />
+      <br />
+      <br />
+
+      <label for="color">color</label>
+      <input type="color" id="color" />
+      <br />
+      <br />
+
+      <label for="archivo">selecciona el archivo</label>
+      <input type="file" id="archivo" />
+      <br />
+      <br />
+
+      <label for="genero">Seleccione su genero: </label>
+      <label for="">masculino</label
+      ><input type="radio" name="genero" value="1" />
+      <label for="">femenino</label
+      ><input type="radio" name="genero" value="2" />
+      <label for="">neutro</label>
+      <input type="radio" name="genero" value="3" />
+      <br />
+      <br />
+
+      <!--el checked es para inicia con una opcion marcada-->
+      <label for="colores">el color: </label>
+      <label for="">rojo</label
+      ><input type="checkbox" name="colores" value="rojo" checked />
+      <label for="">negro</label
+      ><input type="checkbox" name="colores" value="negro" />
+      <label for="">verde</label>
+      <input type="checkbox" name="colores" value="verde" />
+      <br />
+
+      <label for="fecha">fecha</label>
+      <input type="date" id="fecha" />
+      <br />
+      <br />
+
+      <label for="hora">hora</label>
+      <input type="time" id="hora" />
+      <br />
+      <br />
+
+      <label for="mes">mes</label>
+      <input type="month" id="mes" />
+      <br />
+      <br />
+
+      <label for="semana">semana</label>
+      <input type="week" id="semana" />
+      <br />
+      <br />
+
+      <label for="url">url</label>
+      <input type="url" id="url" placeholder="url" />
+      <br />
+      <br />
+
+      <label for="direccion">direccion</label>
+      <textarea id="direccion" cols="20" rows="10"></textarea>
+      <br />
+      <br />
+
+      <input type="submit" value="aceptar">
+      <input type="reset" value="reset">
+      <button click="">guardar</button>
+  
+      
+      </select>
+    </form>
+          <!--El selected es para poner una opcion seleccionada como predeterminada y el form se usa por si acaso este proceso
+             estuviera fuera de la etiqueta form entonces usamos ese identificador para poder usarlo como si estuviera dentro-->
+          <label for="Vehiculo">Marca Vehiculo</label>
+          <select id="marcaVehiculo" form="prueba" >
+            <option value="1">Honda</option>
+            <option value="2"selected>Toyota</option>
+            <option value="3">Nissan</option>
+  </body>
+</html>
