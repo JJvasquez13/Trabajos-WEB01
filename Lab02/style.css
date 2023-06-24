@@ -22,7 +22,7 @@ li {
   margin: 5px 0;
 }
 /* Estilos creados para el perfil profesional */
-#perfil {
+.perfil {
   width: 80%;
   margin: 20px auto;
   background-color: white;
@@ -35,39 +35,39 @@ li {
   border-radius: 50%;
   object-fit: cover;
 }
-#descripcion {
+.descripcion {
   font-style: italic;
 }
 /* Estilos para los datos personales */
-#datos_personales {
+.datos_personales {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#datos_personales div {
+.datos_personales div {
   margin-left: 20px;
 }
 /* Estilos para los datos académicos, de capacitación e idiomas */
-#datos_academicos,
-#datos_capacitacion,
-#datos_idiomas {
+.datos_academicos,
+.datos_capacitacion,
+.datos_idiomas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 /* Estilo para las referencias */
-#referencias {
+.referencias {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 /* Estilos para las redes sociales */
-#redes_sociales {
+.redes_sociales {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#redes_sociales img {
+.redes_sociales img {
   width: 50px;
   height: 50px;
   margin-right: 10px;

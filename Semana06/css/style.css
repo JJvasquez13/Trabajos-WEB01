@@ -1,0 +1,41 @@
+*{
+    /* background-color: url("../img/foto.jpg"); */
+    background: beige;
+    margin: 0px;
+}
+
+/* agrupamientos */
+
+.div1,.div2,.div3,.div4{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.div1,.div2{
+    display: inline-block;
+}
+
+.div1{
+    border-radius: 50%;
+    width: 15%;
+    background: url("../img/foto.png") aquamarine;
+    background-size: cover;
+}
+
+.div2{
+    background: greenyellow;
+    width: 84%;
+}
+
+.div3{
+    background: rgb(139, 36, 122);
+    width: 100%;
+}
+
+.div4{
+    background: plum;
+    width: 100%;
+}
+
