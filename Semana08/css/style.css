@@ -1,0 +1,44 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+nav.menu div.options ul li a {
+    color: orange;
+}
+
+div#page > div {
+    color: red;
+}
+
+div.post span + span {
+    color: blue;
+}
+
+div.post strong ~ strong {
+    color: burlywood;
+}
+
+div#menu * {
+    background: greenyellow;
+    color: blueviolet;
+    margin: 0px;
+}
+
+div#menu h1:hover {
+    color: red;
+    background: pink;
+    text-align: center;
+}
+
+.nombre:focus {
+    background: aquamarine;
+    color: black;
+}
+
+.imagen:hover {
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 10px 5px 10px 5px aquamarine;
+}
