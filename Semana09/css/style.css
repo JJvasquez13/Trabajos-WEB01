@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient(to right, #4DD597 50%, #F2F2F2 50%);
+}
+
+.texto {
+    background: #dcdcdc;
+    border: none;
+}
+
+.texto:hover {
+    border: 2px solid black;
+}
+
+.text:focus {
+    border: 3px solid blue;
+}

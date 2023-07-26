@@ -1,0 +1,55 @@
+html, body {
+    margin: 0px;
+}
+
+header {
+    background: #F29D35;
+    box-shadow: 0px 5px 10px 5px #F27F3D;
+}
+
+a {
+    text-decoration: none;
+    color: #D92332;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header div.menu{
+    margin: 0px;
+    width: 100%;
+    height: 70px;
+}
+
+header div.menu ul.comodo li {
+    padding: 15px;
+}
+
+header div.menu ul.comodo {
+    padding: 0px 30px;
+    position: fixed;
+    float: right;
+    left: 1000px;
+    top: -5px;
+    list-style: none;
+    display: flex;
+}
+
+header div.menu div.logo h3.text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #A6212C;
+    font-size: 65px;
+    position: fixed;
+    left: 75px;
+    top: -62.5px;
+}
+
+header div.menu ul.comodo li a:hover {
+    color: #F2BD1D;
+    background: #A6212C;
+    border-radius: 20%;
+}
+
+header div.menu div.logo img.imgage:hover {
+    border-radius: 45%;
+}
+
