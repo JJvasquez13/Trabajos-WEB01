@@ -1,16 +1,35 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background: linear-gradient(to right, #4DD597 50%, #F2F2F2 50%);
 }
 
 .texto {
-    background: #dcdcdc;
     border: none;
+    background: #dcdcdc;
 }
 
 .texto:hover {
     border: 2px solid black;
 }
 
-.text:focus {
-    border: 3px solid blue;
+.texto:focus {
+    border: 3px solid #0795F1 !important;
+}
+
+.loginn {
+    background: #4DD597 !important;
+    border: none !important;
+}
+
+.loginn:hover {
+    background: #47494A !important;
+}
+
+a {
+    text-decoration: none !important;
+    list-style: none;
 }
