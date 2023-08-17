@@ -14,12 +14,11 @@ var meses = [
   "Diciembre",
 ];
 
-for (var i = 0; i < meses.length; i++) {
-  console.log(meses[i]);
-}
+meses.forEach(function (mes) {
+  console.log(mes);
+});
 
 // Ejercicio 2
-// Punto 1
 var valores = [true, 5, false, "hola", "adios", 2];
 
 var elementosDeTexto = valores.filter(function (item) {
@@ -27,14 +26,14 @@ var elementosDeTexto = valores.filter(function (item) {
 });
 
 if (elementosDeTexto.length >= 2) {
-  var primerElemento = elementosDeTexto[0];
-  var segundoElemento = elementosDeTexto[1];
+  var [primerElemento, segundoElemento] = elementosDeTexto;
 
-  if (primerElemento.length > segundoElemento.length) {
+  var comparacion = primerElemento.length - segundoElemento.length;
+  if (comparacion > 0) {
     console.log(
       `${primerElemento} es mayor en longitud que ${segundoElemento}`
     );
-  } else if (segundoElemento.length > primerElemento.length) {
+  } else if (comparacion < 0) {
     console.log(
       `${segundoElemento} es mayor en longitud que ${primerElemento}`
     );
@@ -49,50 +48,45 @@ if (elementosDeTexto.length >= 2) {
 var valor1 = valores[0]; // true
 var valor2 = valores[2]; // false
 
-// Operador AND para obtener true
-var resultadoTrue = valor1 && valor2;
-console.log(`Resultado true: ${resultadoTrue}`);
+// Operador AND y OR
+console.log(`Resultado true: ${valor1 && valor2}`);
+console.log(`Resultado false: ${valor1 || valor2}`);
 
-// Operador OR para obtener false
-var resultadoFalse = valor1 || valor2;
-console.log(`Resultado false: ${resultadoFalse}`);
+// Punto 3 Operaciones matemáticas
+var [numero1, numero2] = valores.filter(function (item) {
+  return typeof item === "number";
+});
 
-// Punto 3
-// Suma
-var suma = valores[1] + valores[5];
-console.log(`El resultado de la suma es: ${suma}`);
+var operaciones = [
+  { nombre: "Suma", operacion: numero1 + numero2 },
+  { nombre: "Resta", operacion: numero1 - numero2 },
+  { nombre: "Multiplicación", operacion: numero1 * numero2 },
+  { nombre: "División", operacion: numero1 / numero2 },
+  { nombre: "Residuo", operacion: numero1 % numero2 },
+];
 
-// Resta
-var resta = valores[1] - valores[5];
-console.log(`El resultado de la resta es: ${resta}`);
-
-// Multiplicacion
-var multiplicacion = valores[1] * valores[5];
-console.log(`El resultado de la multiplicacion es: ${multiplicacion}`);
-
-// Division
-var division = valores[1] / valores[5];
-console.log(`El resultado de la division es: ${division}`);
-
-// Residuo
-var residuo = valores[1] % valores[5];
-console.log(`El residuo de la division es: ${residuo}`);
+operaciones.forEach(function (op) {
+  console.log(`El resultado de la ${op.nombre} es: ${op.operacion}`);
+});
 
 // Ejercicio 3
 var numero1 = 5;
 var numero2 = 8;
 
-if (numero1 <= numero2) {
-  console.log(`El ${numero1} no es mayor que ${numero2}`);
+function verificarNumero(num) {
+  if (num <= 0) {
+    if (num < 0) {
+      console.log(`El ${num} es negativo`);
+    } else {
+      console.log(`El ${num} es igual a cero`);
+    }
+  } else {
+    console.log(`El ${num} es positivo`);
+  }
 }
 
-if (numero2 > 0) {
-  console.log(`El ${numero2} es positivo`);
-}
-
-if (numero1 < 0 || numero1 !== 0) {
-  console.log(`El ${numero1} es negativo o distinto de cero`);
-}
+verificarNumero(numero1);
+verificarNumero(numero2);
 
 if (numero1 + 1 <= numero2) {
   console.log(
@@ -104,12 +98,11 @@ if (numero1 + 1 <= numero2) {
 function calcularFactorial(n) {
   if (n === 0 || n === 1) {
     return 1;
-  } else {
-    return n * calcularFactorial(n - 1);
   }
+  return n * calcularFactorial(n - 1);
 }
 
-var numero = 5; // Cambiando este numero se puede calcular el factorial de cualquier numero
+var numero = 5;
 var factorial = calcularFactorial(numero);
 console.log(`El factorial de ${numero} es ${factorial}`);
 
@@ -134,14 +127,13 @@ function mostrarParOImpar() {
 // Ejercicio 6
 function analizarCadena(cadena) {
   if (cadena === cadena.toUpperCase()) {
-    return "La cadena está formada solo por mayúsculas.";
+    return "mayúsculas";
   } else if (cadena === cadena.toLowerCase()) {
-    return "La cadena está formada solo por minúsculas.";
+    return "minúsculas";
   } else {
-    return "La cadena está formada por una mezcla de mayúsculas y minúsculas.";
+    return "una mezcla de mayúsculas y minúsculas";
   }
 }
 
-var texto = "HolaMundo"; // Cambiando este String podemos probar varias palabras
-var resultado = analizarCadena(texto);
-console.log(resultado);
+var texto = "HolaMundo"; //Cambiando este String se puede ver la diferencia
+console.log(`La cadena "${texto}" está formada por ${analizarCadena(texto)}.`);
